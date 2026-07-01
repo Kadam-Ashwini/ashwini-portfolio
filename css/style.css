@@ -260,6 +260,8 @@ ul { list-style: none; }
   font-weight: 800;
   color: var(--accent2);
   line-height: 1;
+  pointer-events:none;
+  z-index:0;
 }
 .stat-label { font-size: 0.78rem; color: var(--text2); margin-top: 4px; }
 .about-right { display: flex; flex-direction: column; gap: 20px; }
@@ -356,7 +358,7 @@ ul { list-style: none; }
   border-radius: 50px;
   letter-spacing: 0.5px;
 }
-.project-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+.project-header { display:flex; justify-content:space-between; align-items:center; margin-bottom:20px; position:relative; z-index:2;}
 .project-icon {
   width: 48px; height: 48px;
   background: rgba(124,110,245,0.15);
@@ -365,10 +367,9 @@ ul { list-style: none; }
   color: var(--accent2);
   font-size: 1.2rem;
 }
+.project-links{position:relative;z-index:5;}
 .project-links a {
-  color: var(--text2);
-  font-size: 1.1rem;
-  transition: var(--trans);
+  display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;border-radius:50%;border:1px solid var(--border);color:var(--text2);font-size:1.1rem;transition:var(--trans);cursor:pointer;position:relative;z-index:10;
 }
 .project-links a:hover { color: var(--accent2); }
 .project-card h3 { font-family: var(--font-head); font-size: 1.3rem; font-weight: 800; margin-bottom: 6px; }
